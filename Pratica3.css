@@ -1,3 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
+
+.container {
+    width: fit-content;
+    position: relative;
+}
+
+
+.container img {
+    padding: 5px;
+    border-radius: 30px;
+    width: 300px;
+}
+
+
+
+#save_button {
+    display: flex;
+    background-color: red;
+    font-weight: 500;
+    color: white;
+    border-radius: 30px;
+    width: 70px;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    transition: bottom 1s linear 0.1s, right 1s linear 0.1s;
+}
+
+.card_footer {
+    display: flex;
+    gap: 10px;
+    height: 35px;
+    position: absolute;
+    bottom: 340px;
+    left: 20px;
+    right: 20px;
+    transition: bottom 1s linear 0.1s;
+}
+
+#description_button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 50px;
+    background-color: whitesmoke;
+    width: 160px;
+    font-weight: 500;
+    padding: 0 10px;
+}
+
+#description_button p {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    width: 35px;
+}
+
+.icons ion-icon{
+    transform: scale(1.5);
+}
+
+/* Codice per far comparire i bottoni */
+
+#save_button, .card_footer {
+    visibility: hidden;
+}
+
+.container img:hover {
+    filter: brightness(70%);
+}
+
+.container:hover  #save_button {
+    visibility: visible;
+    opacity: 0.9;
+    bottom: 345px;
+    right: 20px;
+}
+
+.container:hover  .card_footer {
+    visibility: visible;
+    opacity: 0.9;
+    bottom: 20px;
+}
+
+
